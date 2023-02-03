@@ -1,30 +1,70 @@
 // Wait for the DOM to finish lading before runnin the game
 // Get the button elements and event listeners to them
 
-function computerOption() {
-    let options = ["Stone", "Paper", "Scissors"]
-    const randomElement = options[Math.floor(Math.random() * options.length)];
+function computerSelection() {
+    let options = ["Rock", "Paper", "Scissors"]
+    const randomElement = options[Math.floor(Math.random() * options.length)]
 
-    let ComputerChoice = document.getElementById("computer-choice")
-    ComputerChoice.innerText = randomElement
+    let computerChoice = document.getElementById("computer-choice")
+    computerChoice.innerText = randomElement
 }
 
-document.addEventListener("DOMContentLoaded", runGame())
-
-function runGame() {
+function Options() {
 
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            let userOption = button.innerText;
+            let userOption = button.innerText
 
             let userChoice = document.getElementById("user-choice")
             userChoice.innerText = userOption
 
-            computerOption()
+            computerSelection()
         })
+
+        
     }
 
 }
 
+function playRound() {
+    let userOption = document.getElementById("user-choice").innerText
+    let computerSelection = document.getElementById("computer-choice").innerText
+
+    if (userOption === "Rock" && computerSelection === "Scissors"){
+        alert('You win!')
+        //incrementWin()
+    } else if (userOption === "Rock" && computerSelection === "Paper"){
+        alert('You lose!')
+        //incremenLost()
+    } else if (userOption === "Rock" && computerSelection === "Rock"){
+        alert('Draw!')
+    } else if (userOption === "Paper" && computerSelection === "Scissors"){
+        alert('You lose!')
+        //incremenLost()
+    } else if (userOption === "Paper" && computerSelection === "Rock"){
+        alert('You win!')
+        //incrementWin()
+    } else if (userOption === "Paper" && computerSelection === "Paper"){
+        alert('Draw!')
+    } else if (userOption === "Scissors" && computerSelection === "paper"){
+        alert('You win!')
+        //incrementWin()
+    } else if (userOption === "Scissors" && computerSelection === "Rock"){
+        alert('You lose!')
+        //incremenLost()
+    } else if (userOption === "Scissors" && computerSelection === "Scissors"){
+        alert('Draw!')
+    } 
+
+    console.log(userOption)
+    console.log(computerSelection)
+}
+
+function runGame() {
+    Options()
+    playRound()
+}
+
+document.addEventListener("DOMContentLoaded", runGame())
