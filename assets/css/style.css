@@ -1,0 +1,122 @@
+body {
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    color: #445361;
+    text-align: center;
+    
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.logo {
+    height: 60px;
+    padding-right: 5px;
+}
+
+.game-area {
+    background-color: #a6e1b0;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 150px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+.question-area {
+    
+    width: 50%;
+    font-size: 1rem;
+    margin: auto;
+    padding: 0px 0;
+    
+}
+
+.question-area span {
+    padding: 0 15px;
+}
+
+.score-area {
+    
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.controls-area {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.scores {
+    color: #1c1e1c;
+    font-weight: bold;
+    font-weight: bold;
+}
+
+.choice {
+    color: #141614;
+}
+
+.logo {
+    height: 60px;
+    padding-right: 5px;
+}
+
+#win {
+    color: green;
+    font-weight: bold;
+}
+
+#lost {
+    color: red;
+    font-weight: bold;
+}
+
+.btn {
+    width: 220px;
+    height: 60px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+/* --------- Media queries */
+
+@media (max-width: 414px) {
+    .controls-area {
+        width: 100%;
+    }
+
+
+    .question-area {
+        padding: 0% 0;
+        width: 100%;
+    }
+
+    .score-area {
+        width: 100%;
+    }
+
+    .scores {
+        margin: 0.2em auto;
+        display: block;
+        padding: 0px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .game-area {
+        height: 70vh;
+    }
