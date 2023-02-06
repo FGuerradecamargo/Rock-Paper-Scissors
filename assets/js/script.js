@@ -30,36 +30,46 @@ function Options() {
 
 }
 
+function incrementWin() {  
+    let oldScore = parseInt(document.getElementById("win").innerText)
+    document.getElementById("win").innerText = ++oldScore
+}
+
+function incrementLost() {  
+    let oldScore = parseInt(document.getElementById("lost").innerText)
+    document.getElementById("lost").innerText = ++oldScore
+}
+
+
 function playRound() {
     let userOption = document.getElementById("user-choice").innerText
     let computerSelection = document.getElementById("computer-choice").innerText
 
     if (userOption === "Rock" && computerSelection === "Scissors"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You won :D`)
-        //incrementWin()
+        incrementWin()
     } else if (userOption === "Rock" && computerSelection === "Paper"){
         alert(alert(`You chose ${userOption}, Computer chose ${computerSelection}. You lose :C`))
-        //incremenLost()
+        incrementLost()
     } else if (userOption === "Rock" && computerSelection === "Rock"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. Draw!`)
     } else if (userOption === "Paper" && computerSelection === "Scissors"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You lose :C`)
-        //incremenLost()
+        incrementLost()
     } else if (userOption === "Paper" && computerSelection === "Rock"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You won :D`)
-        //incrementWin()
+        incrementWin()
     } else if (userOption === "Paper" && computerSelection === "Paper"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. Draw!`)
     } else if (userOption === "Scissors" && computerSelection === "paper"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You won :D`)
-        //incrementWin()
+        incrementWin()
     } else if (userOption === "Scissors" && computerSelection === "Rock"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You lose :C`)
-        //incremenLost()
+        incrementLost()
     } else if (userOption === "Scissors" && computerSelection === "Scissors"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. Draw!`)
     } 
-
 
 }
 
