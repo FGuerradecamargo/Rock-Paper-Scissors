@@ -1,6 +1,10 @@
 // Wait for the DOM to finish lading before runnin the game
 // Get the button elements and event listeners to them
 
+
+/**
+  * Gets computer option
+  */
 function computerOption() {
     let options = ["Rock", "Paper", "Scissors"]
     const randomElement = options[Math.floor(Math.random() * options.length)]
@@ -30,17 +34,25 @@ function Options() {
 
 }
 
+ /**
+  * Gets the current score from the DOM and increment it by 1
+  */
 function incrementWin() {  
     let oldScore = parseInt(document.getElementById("win").innerText)
     document.getElementById("win").innerText = ++oldScore
 }
 
+ /**
+  * Gets the current score from the DOM and increment it by 1
+  */
 function incrementLost() {  
     let oldScore = parseInt(document.getElementById("lost").innerText)
     document.getElementById("lost").innerText = ++oldScore
 }
 
-
+/**
+ * Check user option against computer option
+ */
 function playRound() {
     let userOption = document.getElementById("user-choice").innerText
     let computerSelection = document.getElementById("computer-choice").innerText
