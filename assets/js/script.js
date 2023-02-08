@@ -3,10 +3,10 @@
 
 
 /**
-  * Gets computer option
+  * Gets computer
   */
 function computerOption() {
-    let options = ["Rock", "Paper", "Scissors"]
+    let options = ["ROCK", "PAPER", "SCISSORS"]
     const randomElement = options[Math.floor(Math.random() * options.length)]
 
     let computerChoice = document.getElementById("computer-choice")
@@ -57,29 +57,31 @@ function playRound() {
     let userOption = document.getElementById("user-choice").innerText
     let computerSelection = document.getElementById("computer-choice").innerText
 
-    if (userOption === "Rock" && computerSelection === "Scissors"){
+    console.log(userOption, computerSelection)
+
+    if (userOption === "ROCK" && computerSelection === "SCISSORS"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You won :D`)
         incrementWin()
-    } else if (userOption === "Rock" && computerSelection === "Paper"){
+    } else if (userOption === "ROCK" && computerSelection === "PAPER"){
         alert(alert(`You chose ${userOption}, Computer chose ${computerSelection}. You lose :C`))
         incrementLost()
-    } else if (userOption === "Rock" && computerSelection === "Rock"){
+    } else if (userOption === "ROCK" && computerSelection === "ROCK"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. Draw!`)
-    } else if (userOption === "Paper" && computerSelection === "Scissors"){
+    } else if (userOption === "PAPER" && computerSelection === "SCISSORS"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You lose :C`)
         incrementLost()
-    } else if (userOption === "Paper" && computerSelection === "Rock"){
+    } else if (userOption === "PAPER" && computerSelection === "ROCK"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You won :D`)
         incrementWin()
-    } else if (userOption === "Paper" && computerSelection === "Paper"){
+    } else if (userOption === "PAPER" && computerSelection === "PAPER"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. Draw!`)
-    } else if (userOption === "Scissors" && computerSelection === "paper"){
+    } else if (userOption === "SCISSORS" && computerSelection === "PAPER"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You won :D`)
         incrementWin()
-    } else if (userOption === "Scissors" && computerSelection === "Rock"){
+    } else if (userOption === "SCISSORS" && computerSelection === "ROCK"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. You lose :C`)
         incrementLost()
-    } else if (userOption === "Scissors" && computerSelection === "Scissors"){
+    } else if (userOption === "SCISSORS" && computerSelection === "SCISSORS"){
         alert(`You chose ${userOption}, Computer chose ${computerSelection}. Draw!`)
     } 
 
