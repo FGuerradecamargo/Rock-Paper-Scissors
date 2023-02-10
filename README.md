@@ -26,6 +26,6 @@ Another blue button should appear to click: _Open Browser_.
  1. Box will show user and computer's last options
  ![image](https://user-images.githubusercontent.com/86023380/218190821-bcf10d55-5e46-4cf3-b3d1-9f0473e4083e.png)
 
- 2. Win and Lost score will be acremented according to resuts 
+ 2. Win and Lost score will be incremented according to resuts 
 ![image](https://user-images.githubusercontent.com/86023380/218190863-ed970dc3-17d0-4b3d-a7f6-175940094327.png)
 
